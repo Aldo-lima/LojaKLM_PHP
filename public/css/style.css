@@ -73,3 +73,24 @@ body {
       margin:15px 0px 0px 5px;
 
       }
+
+   #form {
+        width:1120px;
+     margin: 50px 0px 0px 100px;
+     position: absolute;
+     }
+         
+         #form_contato{
+         width:1120px;
+         margin: 460px 0px 0px 100px;
+         position: absolute;
+         
+         }
+         
+         #form_endereco {
+         width:1120px;
+         margin: 700px 0px 0px 100px;
+         position: absolute;
+         
+         }
+

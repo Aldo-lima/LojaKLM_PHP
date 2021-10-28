@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Fornecedore;
+use App\Model\Categoria;
+use App\Model\Contato;
+use Illuminate\Support\Facades\DB;
 
 class FornecedorController extends Controller
 {
@@ -27,7 +30,9 @@ class FornecedorController extends Controller
      */
     public function create()
     {
-        return view('admin.fornecedor.formfornecedor');
+        $action = route('fornecedor.store');
+        $categorias = Categoria::all();
+        return view('admin.fornecedor.formfornecedor', compact('action', 'categorias'));
     }
 
     /**
@@ -38,7 +43,13 @@ class FornecedorController extends Controller
      */
     public function store(Request $request)
     {
-        Fornecedore::create($request->all());
+        
+        
+
+        DB::beginTransaction();
+        $fornecedor = Fornecedore::create($request->all());
+        $fornecedor->contato()->create($request->all());
+        DB::Commit();
         $request->session()->flash('sucesso', "Categoria Incluida com sucesso !");
         return redirect()->route('fornecedor.index');
     }

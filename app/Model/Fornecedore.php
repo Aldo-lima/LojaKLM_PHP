@@ -6,7 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fornecedore extends Model
 {
-    protected $fillable =['nome', 'nome_r', 'cnpj', 'inscri_esta' ];
+    protected $fillable =[
+        'nome', 
+        'nome_r',
+        'cnpj',
+        'inscri_esta',
+        'cep',
+        'rua',
+        'estado',
+        'numero',
+        'cidade',
+        'proximidade',
+        'bairro',
+        'complemento',
+        'categoria_id',
+     ];
 
 
     public function categoria(){

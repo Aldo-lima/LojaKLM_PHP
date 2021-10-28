@@ -6,8 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contato extends Model
 {
-    public function contatos(){
-        return $this->belongsTO(Contato::class);
+    protected $fillable = [
+        'nome_contato',
+        'cargo',
+        'telefone',
+        'tipo_telefone',
+        'email',
+        'tipo_email',
+        'fornecedore_id'
+    ];
+
+    public function fornecedor(){
+        return $this->belongsTO(Fornecedor::class);
     }
 
 }
