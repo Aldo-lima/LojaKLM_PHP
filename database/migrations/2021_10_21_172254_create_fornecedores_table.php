@@ -19,6 +19,15 @@ class CreateFornecedoresTable extends Migration
             $table->string('nome_r',200);
             $table->string('cnpj',20);
             $table->string('inscri_esta',20);
+            $table->string('cep', 15);
+            $table->string('rua',50);
+            $table->string('estado',20);
+            $table->integer('numero');
+            $table->string('cidade',50);
+            $table->string('proximidade',50);
+            $table->string('bairro',50);
+            $table->string('complemento',50);
+            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

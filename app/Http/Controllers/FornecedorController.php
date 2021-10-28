@@ -15,8 +15,9 @@ class FornecedorController extends Controller
     public function index()
     {
         $subtitulo = 'Listacidade';
+      //  $fornecedores = Fornecedore::with('categoria', 'contato')->get();
         $fornecedores = Fornecedore::all();
-        return view('admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
+          return view('admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
     }
 
     /**
@@ -51,7 +52,7 @@ class FornecedorController extends Controller
     public function show($id)
     {
         $fornecedor =  Fornecedore::find($id);
-        return view('admin.categoria', compact( 'categoria') );
+        return view('admin.fornecedor.fornecedor', compact( 'fornecedor') );
     }
 
     /**

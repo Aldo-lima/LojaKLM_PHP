@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\FornecedorController;
+use App\Http\Controllers\ProdutoController;
 
 
 
@@ -39,6 +40,18 @@ route::delete('/fornecedor/delete/{id}',[FornecedorController::class, 'destroy']
 route::post('/fornecedor/store/',[FornecedorController::class, 'store'])->name('fornecedor.store');
 route::get('/fornecedor/editar/{id}',[FornecedorController::class, 'edit'])->name('fornecedor.edit');
 route::put('/fornecedor/update/{id}',[FornecedorController::class, 'update'])->name('fornecedor.update');
+
 Route::get('/', function () {
     return view('Admin.home');
-});
+})->name('home');
+
+//========================== Rotas Produtos========================================
+
+route::get('/produto',[ProdutoController::class, 'index'])->name('produto.index');
+route::get('/produto/create',[ProdutoController::class, 'create'])->name('produto.create');
+route::get('/produto/show/{id}',[ProdutoController::class, 'show'])->name('produto.show');
+route::get('/produto/deletar/{id}',[ProdutoController::class, 'deletar'])->name('produto.deletar');
+route::delete('/produto/delete/{id}',[ProdutoController::class, 'destroy'])->name('produto.delete');
+route::post('/produto/store/',[ProdutoController::class, 'store'])->name('produto.store');
+route::get('/produto/editar/{id}',[ProdutoController::class, 'edit'])->name('produto.edit');
+route::put('/produto/update/{id}',[ProdutoController::class, 'update'])->name('produto.update');

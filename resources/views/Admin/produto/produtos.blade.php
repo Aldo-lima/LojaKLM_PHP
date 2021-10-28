@@ -21,18 +21,18 @@
         <th scope="col">Codigo</th>
         <th scope="col">Categoria</th>
         <th scope="col">Nome</th>
-        <th scope="col">Razão Social</th>
+        <th scope="col">Nome Fantasia</th>
         <th scope="col">Detalhes</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-          @forelse ( $fornecedores as $fornecedor )
-        <th scope="row">{{$fornecedor->id}}</th>
-        <td>{{$fornecedor->categoria->nome}}</td>
-        <td>{{$fornecedor->nome}}</td>
-        <td>{{$fornecedor->nome_r}}</td>
-        <td><a href="{{route('fornecedor.show', $fornecedor->id)}}">ver</a></td>
+          @forelse ( $produtos as $produto )
+        <th scope="row">{{$produto->id}}</th>
+        <td>{{$produto->produto}}</td>
+        <td>{{$produto->descricao}}</td>
+        <td>produto</td>
+        <td><a href="{{route('produto.show', $produto->id)}}">ver</a></td>
     </tr>
       @empty
          <th>
