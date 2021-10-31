@@ -42,7 +42,7 @@ route::get('/fornecedor/editar/{id}',[FornecedorController::class, 'edit'])->nam
 route::put('/fornecedor/update/{id}',[FornecedorController::class, 'update'])->name('fornecedor.update');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Admin.home');
 })->name('home');
 
 //========================== Rotas Produtos========================================

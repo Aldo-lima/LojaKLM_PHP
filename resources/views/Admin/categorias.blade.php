@@ -1,4 +1,4 @@
-@extends('admin.layouts.principal')
+@extends('Admin.layouts.principal')
 
 @section('container-principal')
 

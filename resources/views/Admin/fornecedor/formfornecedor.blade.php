@@ -1,4 +1,4 @@
-@extends('admin/layouts/principal')
+@extends('Admin/layouts/principal')
 @section('container-principal')
   <form action="{{$action}}" method="POST">
        @csrf
@@ -101,7 +101,7 @@
               </div>
             </div>
         </div>
-  
+
     </div>
   </div>
   -------------------------------------------
@@ -159,14 +159,14 @@
                 <label for="disabledTextInput" class="form-label">Complemento</label>
                 <input type="text" id="disabledTextInput" name="complemento"  class="form-control" placeholder="Disabled input">
               </div>
-  
+
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col-10">
              <button type="submit" class="btn btn-outline-primary">Salvar</button>
-  
+
             </div>
             <div class="col">
              <a href="{% url 'listar_fornecedor' %}" type="button" class="btn btn-outline-warning">Cancelar</a>

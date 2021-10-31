@@ -1,8 +1,8 @@
-@extends('admin/layouts/principal')
+@extends('Admin/layouts/principal')
 @section('container-principal')
  <div class="erros">
-  
- </div>    
+
+ </div>
 <form action="{{route('categoria.update', $categoria->id)}} " method="POST">
     @method('PUT')
    @csrf
