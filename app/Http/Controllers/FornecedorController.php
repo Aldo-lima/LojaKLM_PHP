@@ -43,8 +43,8 @@ class FornecedorController extends Controller
      */
     public function store(Request $request)
     {
-        
-        
+
+
 
         DB::beginTransaction();
         $fornecedor = Fornecedore::create($request->all());
@@ -63,7 +63,7 @@ class FornecedorController extends Controller
     public function show($id)
     {
         $fornecedor =  Fornecedore::find($id);
-        return view('admin.fornecedor.fornecedor', compact( 'fornecedor') );
+        return view('Admin.fornecedor.fornecedor', compact( 'fornecedor') );
     }
 
     /**
