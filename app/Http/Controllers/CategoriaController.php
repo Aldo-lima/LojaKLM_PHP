@@ -17,7 +17,7 @@ class CategoriaController extends Controller
     {
         $subtitulo = 'Listacidade';
         $categorias = Categoria::all();
-        return view('admin.categorias', compact('subtitulo', 'categorias'));
+        return view('Admin.categorias', compact('subtitulo', 'categorias'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('admin.formCategoria');
+        return view('Admin.formCategoria');
     }
 
     /**
@@ -52,7 +52,7 @@ class CategoriaController extends Controller
     public function show($id)
     {
         $categoria =  Categoria::find($id);
-        return view('admin.categoria', compact( 'categoria') );
+        return view('Admin.categoria', compact( 'categoria') );
     }
 
     /**
@@ -64,7 +64,7 @@ class CategoriaController extends Controller
     public function edit($id)
     {
         $categoria =  Categoria::find($id);
-        return view('admin.editCategoria', compact( 'categoria') );
+        return view('Admin.editCategoria', compact( 'categoria') );
     }
 
     /**
@@ -78,7 +78,7 @@ class CategoriaController extends Controller
     {
         if(!$categoria = Categoria::find($id))
         return redirect()->back();
-     $categoria->update($request->all());   
+     $categoria->update($request->all());
      return redirect()->route('categoria.index');
     }
 
@@ -91,7 +91,7 @@ class CategoriaController extends Controller
     public function deletar($id)
     {
         $categoria =  Categoria::find($id);
-        return view('admin.deleteCategoria', compact( 'categoria') );
+        return view('Admin.deleteCategoria', compact( 'categoria') );
     }
     /**
      * Remove the specified resource from storage.
@@ -104,6 +104,6 @@ class CategoriaController extends Controller
         $categoria =  Categoria::find($id);
         $categoria->delete();
         return redirect()->route('categoria.index');
-        
+
     }
 }

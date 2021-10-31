@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\produto;
+use App\Model\Produto;
 
 class ProdutoController extends Controller
 {
@@ -47,9 +47,9 @@ class ProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {     
+    {
            $produto =  Produto::find($id);
-        return view('admin.produto.produto', compact( 'produto') );
+        return view('Admin.produto.produto', compact( 'produto') );
     }
 
     /**
