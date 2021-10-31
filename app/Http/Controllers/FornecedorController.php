@@ -20,7 +20,7 @@ class FornecedorController extends Controller
         $subtitulo = 'Listacidade';
       //  $fornecedores = Fornecedore::with('categoria', 'contato')->get();
         $fornecedores = Fornecedore::all();
-          return view('admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
+          return view('Admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
     }
 
     /**
@@ -32,7 +32,7 @@ class FornecedorController extends Controller
     {
         $action = route('fornecedor.store');
         $categorias = Categoria::all();
-        return view('admin.fornecedor.formfornecedor', compact('action', 'categorias'));
+        return view('Admin.fornecedor.formfornecedor', compact('action', 'categorias'));
     }
 
     /**
@@ -75,7 +75,7 @@ class FornecedorController extends Controller
     public function edit($id)
     {
         $fornecedor =  Fornecedore::find($id);
-        return view('admin.editCategoria', compact( 'fornecedor') );
+        return view('Admin.editCategoria', compact( 'fornecedor') );
     }
 
     /**
@@ -102,7 +102,7 @@ class FornecedorController extends Controller
     public function deletar($id)
     {
         $fornecedor =  Fornecedore::find($id);
-        return view('admin.deleteCategoria', compact( 'fornecedor') );
+        return view('Admin.deleteCategoria', compact( 'fornecedor') );
     }
 
     /**
