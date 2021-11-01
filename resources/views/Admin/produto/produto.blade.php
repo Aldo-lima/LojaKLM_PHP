@@ -1,4 +1,4 @@
-@extends('admin.layouts.principal')
+@extends('Admin.layouts.principal')
 @section('container-principal')
 
 <div class="card" id="fornecedor">
@@ -11,7 +11,7 @@
               <span>Nome Fantasia:</span><br>
               {{$produto->produto}}
           </div>
-     
+
          <div class="col-4">
             <span>Razão social:</span> <br>{{$produto->descricao}}
          </div>
@@ -38,30 +38,30 @@
       <div class="row">
           <div class="col">
           <span>Nome</span><br>
-          
+
           </div>
           <div class="col">
            <span>Telefone</span><br>
-             
+
           </div>
            <div class="col">
               <span>E-mail:</span><br>
-              
+
           </div>
       </div>
       <br>
      <div class="row">
           <div class="col">
           <span>Cargo</span><br>
-           
+
           </div>
           <div class="col">
            <span>tipo:</span><br>
-              
+
           </div>
            <div class="col">
               <span>Tipo</span><br>
-             
+
                        </div>
       </div>
   </div>
@@ -75,15 +75,15 @@
       <div class="row">
           <div class="col">
               <span>Rua:</span><br>
-              
+
           </div>
           <div class="col">
               <span>Número:</span><br>
-          
+
           </div>
           <div class="col">
               <span>Complemento:</span><br>
-              
+
           </div>
       </div>
       <br>

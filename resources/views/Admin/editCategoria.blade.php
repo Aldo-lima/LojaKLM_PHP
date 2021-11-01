@@ -13,6 +13,7 @@
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">categoria</label>
               <input type="text" name="nome" value="{{$categoria->nome}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <br>
               <button type="submit" class="btn btn-outline-primary">Salvar</button>
                <a href="{{route('categoria.index')}}" type="button" class="btn btn-outline-warning">Cancelar</a>
           </form>

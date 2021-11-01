@@ -43,9 +43,6 @@ class FornecedorController extends Controller
      */
     public function store(Request $request)
     {
-
-
-
         DB::beginTransaction();
         $fornecedor = Fornecedore::create($request->all());
         $fornecedor->contato()->create($request->all());
@@ -74,8 +71,10 @@ class FornecedorController extends Controller
      */
     public function edit($id)
     {
+
         $fornecedor =  Fornecedore::find($id);
-        return view('Admin.editCategoria', compact( 'fornecedor') );
+        $categorias = Categoria::all();
+        return view('Admin.fornecedor.editFornecedor', compact( 'fornecedor', 'categorias' ) );
     }
 
     /**
@@ -87,10 +86,11 @@ class FornecedorController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         if(!$fornecedor = Fornecedore::find($id))
         return redirect()->back();
        $fornecedor->update($request->all());
-       return redirect()->route('categoria.index');
+       return redirect()->route('fornecedor.index');
     }
 
        /**

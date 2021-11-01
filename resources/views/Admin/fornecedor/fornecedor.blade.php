@@ -1,6 +1,7 @@
 @extends('Admin.layouts.principal')
 @section('container-principal')
 
+
 <div class="card" id="fornecedor">
   <div class="card-header">
     Detalhes do fornecedor
@@ -18,11 +19,11 @@
     </div><br>
     <div class="row">
         <div class="col-4">
-         <span>Razão social:</span><br>
+         <span>CNPJ:</span><br>
          {{$fornecedor->cnpj}}
         </div>
         <div class="col">
-        <span>Razão social:</span><br>
+        <span>Inscrição Estadual:</span><br>
          {{$fornecedor->inscri_esta}}
         </div>
     </div><br>
@@ -115,13 +116,12 @@
           </div>
 
       </div><br>
-        <a  class="btn btn-primary">editar</a>
-      <a  type="button" class="btn btn-outline-warning">Cancelar</a>
-     <a  class="btn btn-danger">apagar</a>
+      <a  href="{{route('fornecedor.edit', $fornecedor->id)}}" type="button" class="btn btn-primary">Editar</a>
+      <a href="{{route('fornecedor.index')}}" type="button" class="btn btn-outline-warning">Cancelar</a>
+     <a  class="btn btn-danger">Apagar</a>
   </div>
 
 </div>
 <br>
-
 
 @endsection
