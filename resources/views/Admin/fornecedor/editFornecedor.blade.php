@@ -172,7 +172,7 @@
 
             </div>
             <div class="col">
-             <a href="{% url 'listar_fornecedor' %}" type="button" class="btn btn-outline-warning">Cancelar</a>
+             <a href="{{route('fornecedor.index')}}" type="button" class="btn btn-outline-warning">Cancelar</a>
               </div>
           </div>
             </div>

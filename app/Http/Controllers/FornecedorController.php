@@ -71,7 +71,6 @@ class FornecedorController extends Controller
      */
     public function edit($id)
     {
-
         $fornecedor =  Fornecedore::find($id);
         $categorias = Categoria::all();
         return view('Admin.fornecedor.editFornecedor', compact( 'fornecedor', 'categorias' ) );
@@ -86,7 +85,7 @@ class FornecedorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         if(!$fornecedor = Fornecedore::find($id))
         return redirect()->back();
        $fornecedor->update($request->all());

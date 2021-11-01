@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fornecedore extends Model
 {
     protected $fillable =[
-        'nome', 
+        'nome',
         'nome_r',
         'cnpj',
         'inscri_esta',
@@ -29,5 +29,9 @@ class Fornecedore extends Model
 
     public function contato(){
         return $this->hasOne(Contato::class);
+    }
+
+    public function Produto(){
+        return $this->hasMany(Produto::class);
     }
 }

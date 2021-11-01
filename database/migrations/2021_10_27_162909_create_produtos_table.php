@@ -20,6 +20,7 @@ class CreateProdutosTable extends Migration
             $table->string('unidade_medida');
             $table->string('quantidade_embalagem');
             $table->decimal('preco');
+            $table->foreignId('fornecedore_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
