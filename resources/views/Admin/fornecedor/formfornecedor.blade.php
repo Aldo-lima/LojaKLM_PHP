@@ -8,7 +8,7 @@
     </div>
     <div class="card-body">
           <div class="row">
-            <div class="col-2">
+            <div class="col-3">
                <label for="disabledSelect" class="form-label">Categoria</label>
                 <select type="number"  id="disabledSelect"  name="categoria_id" class="form-select">
                   <option  value="">Selecione uma categoria</option>
