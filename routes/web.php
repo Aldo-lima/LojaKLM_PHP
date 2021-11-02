@@ -57,4 +57,4 @@ route::post('/produto/store/',[ProdutoController::class, 'store'])->name('produt
 route::get('/produto/editar/{id}',[ProdutoController::class, 'edit'])->name('produto.edit');
 route::put('/produto/update/{id}',[ProdutoController::class, 'update'])->name('produto.update');
 
-route::get('/',[AdminController::class, 'home'])->name('home');
+route::get('/',[AdminController::class, 'site'])->name('site');

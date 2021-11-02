@@ -11,8 +11,8 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function home()
+    public function site()
     {
-        return view('Admin.home');
+        return view('Admin.site');
     }
 }
