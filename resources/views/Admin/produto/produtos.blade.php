@@ -3,18 +3,15 @@
 @section('container-principal')
 <div class="card"  id="cad_list">
     <div class="card-header">
-      Fornecedores
+      Produtos
     </div>
       <br>
     <div class="card-body">
-
-
       @if (session('sucesso'))
        <div>
            {{session('sucesso')}}
        </div>
        @endif
-
 <table class="table">
     <thead>
       <tr>

@@ -3,7 +3,7 @@
 
 <div class="card" id="fornecedor">
   <div class="card-header">
-    Detalhes do fornecedor
+    Detalhes do produto
   </div>
   <div class="card-body" >
     <div class="row">
@@ -35,7 +35,7 @@
             </div>
     </div><br>
     <a href="{{route('produto.edit', $produto->id)}}"  class="btn btn-primary">editar</a>
-    <a  type="button" class="btn btn-outline-warning">Cancelar</a>
+    <a  href="{{route('produto.index')}}" type="button" class="btn btn-outline-warning">Cancelar</a>
    <a  class="btn btn-danger">apagar</a>
 
   </div>

@@ -5,7 +5,7 @@
     @csrf
    <div class="card" id="form">
     <div class="card-header">
-      Novo Produto
+      Editar Produto
     </div>
     <div class="card-body">
           <div class="row">

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -41,9 +42,9 @@ route::post('/fornecedor/store/',[FornecedorController::class, 'store'])->name('
 route::get('/fornecedor/editar/{id}',[FornecedorController::class, 'edit'])->name('fornecedor.edit');
 route::put('/fornecedor/update/{id}',[FornecedorController::class, 'update'])->name('fornecedor.update');
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('Admin.home');
-})->name('home');
+})->name('home');*/
 
 //========================== Rotas Produtos========================================
 
@@ -55,3 +56,5 @@ route::delete('/produto/delete/{id}',[ProdutoController::class, 'destroy'])->nam
 route::post('/produto/store/',[ProdutoController::class, 'store'])->name('produto.store');
 route::get('/produto/editar/{id}',[ProdutoController::class, 'edit'])->name('produto.edit');
 route::put('/produto/update/{id}',[ProdutoController::class, 'update'])->name('produto.update');
+
+route::get('/',[AdminController::class, 'home'])->name('home');
