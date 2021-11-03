@@ -122,6 +122,6 @@ class FornecedorController extends Controller
     {
 
       $fornecedores = Fornecedore::where('nome', 'LIKE',  "%$request->nome%");
-      return view('Admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
+      return view('Admin.fornecedor.fornecedores', compact( 'fornecedores'));
      }
 }
