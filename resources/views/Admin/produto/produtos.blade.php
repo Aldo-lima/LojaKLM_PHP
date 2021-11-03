@@ -16,9 +16,9 @@
     <thead>
       <tr>
         <th scope="col">Codigo</th>
-        <th scope="col">Categoria</th>
         <th scope="col">Nome</th>
-        <th scope="col">Nome Fantasia</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Fornecedor</th>
         <th scope="col">Detalhes</th>
       </tr>
     </thead>
@@ -28,7 +28,7 @@
         <th scope="row">{{$produto->id}}</th>
         <td>{{$produto->produto}}</td>
         <td>{{$produto->descricao}}</td>
-        <td>produto</td>
+        <td>{{$produto->fornecedore->nome}}</td>
         <td><a href="{{route('produto.show', $produto->id)}}">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                 <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
