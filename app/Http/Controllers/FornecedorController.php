@@ -15,12 +15,13 @@ class FornecedorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $subtitulo = 'Listacidade';
-      //  $fornecedores = Fornecedore::with('categoria', 'contato')->get();
-        $fornecedores = Fornecedore::all();
+          $subtitulo = 'Listacidade';
+          $fornecedores = Fornecedore::with('categoria', 'contato')->get();
+         // $fornecedores = Fornecedore::all();
           return view('Admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
+
     }
 
     /**
@@ -116,4 +117,11 @@ class FornecedorController extends Controller
         $fornecedor->delete();
         return redirect()->route('categoria.index');
     }
+
+    public function search(Request $request)
+    {
+
+      $fornecedores = Fornecedore::where('nome', 'LIKE',  "%$request->nome%");
+      return view('Admin.fornecedor.fornecedores', compact('subtitulo', 'fornecedores'));
+     }
 }

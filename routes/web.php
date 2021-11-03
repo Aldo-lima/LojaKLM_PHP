@@ -25,14 +25,14 @@ route::get('/categoria',[CategoriaController::class, 'index'])->name('categoria.
 route::get('/categoria/create',[CategoriaController::class, 'create'])->name('categoria.create');
 route::get('/categoria/show/{id}',[CategoriaController::class, 'show'])->name('categoria.show');
 route::get('/categoria/deletar/{id}',[CategoriaController::class, 'deletar'])->name('categoria.deletar');
-route::delete('/categoria/delete/{id}',[CategoriaController::class, 'destroy'])->name('categoria.delete');
+route::delete('/categoria/destroy/{id}',[CategoriaController::class, 'destroy'])->name('categoria.destroy');
 route::post('/categoria/store/',[CategoriaController::class, 'store'])->name('categoria.store');
 route::get('/categoria/editar/{id}',[CategoriaController::class, 'edit'])->name('categoria.edit');
 route::put('/categoria/update/{id}',[CategoriaController::class, 'update'])->name('categoria.update');
 
 
 //========================== Rotas fornecedores========================================
-
+route::post('/fornecedor/search/',[FornecedorController::class, 'search'])->name('fornecedor.search');
 route::get('/fornecedor',[FornecedorController::class, 'index'])->name('fornecedor.index');
 route::get('/fornecedor/create',[FornecedorController::class, 'create'])->name('fornecedor.create');
 route::get('/fornecedor/show/{id}',[FornecedorController::class, 'show'])->name('fornecedor.show');

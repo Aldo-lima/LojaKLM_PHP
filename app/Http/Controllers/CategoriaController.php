@@ -101,8 +101,9 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-        $categoria =  Categoria::find($id);
-        $categoria->delete();
+        $categoria = Categoria::find($id);
+           if ($categoria->fornecedor)
+           echo("ok");
         return redirect()->route('categoria.index');
 
     }
