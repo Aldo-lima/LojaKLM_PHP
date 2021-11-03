@@ -42,9 +42,9 @@ route::post('/fornecedor/store/',[FornecedorController::class, 'store'])->name('
 route::get('/fornecedor/editar/{id}',[FornecedorController::class, 'edit'])->name('fornecedor.edit');
 route::put('/fornecedor/update/{id}',[FornecedorController::class, 'update'])->name('fornecedor.update');
 
-/*Route::get('/', function () {
-    return view('Admin.home');
-})->name('home');*/
+Route::get('/', function () {
+    return view('inicial');
+})->name('home');
 
 //========================== Rotas Produtos========================================
 
@@ -57,4 +57,4 @@ route::post('/produto/store/',[ProdutoController::class, 'store'])->name('produt
 route::get('/produto/editar/{id}',[ProdutoController::class, 'edit'])->name('produto.edit');
 route::put('/produto/update/{id}',[ProdutoController::class, 'update'])->name('produto.update');
 
-route::get('/',[AdminController::class, 'site'])->name('site');
+route::get('/site',[AdminController::class, 'site'])->name('site');

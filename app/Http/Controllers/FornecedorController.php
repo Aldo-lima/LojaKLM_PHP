@@ -120,8 +120,7 @@ class FornecedorController extends Controller
 
     public function search(Request $request)
     {
-
-      $fornecedores = Fornecedore::where('nome', 'LIKE',  "%$request->nome%");
+      $fornecedores = Fornecedore::where('nome', 'LIKE',  "%{$request->nome}%");
       return view('Admin.fornecedor.fornecedores', compact( 'fornecedores'));
      }
 }
