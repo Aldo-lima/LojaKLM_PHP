@@ -118,8 +118,7 @@
       </div><br>
       <a  href="{{route('fornecedor.edit', $fornecedor->id)}}" type="button" class="btn btn-primary">Editar</a>
       <a href="{{route('fornecedor.index')}}" type="button" class="btn btn-outline-warning">Cancelar</a>
-     <a  class="btn btn-danger">Apagar</a>
-  </div>
+       </div>
 
 </div>
 <br>

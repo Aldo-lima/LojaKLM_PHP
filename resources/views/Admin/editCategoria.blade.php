@@ -3,15 +3,15 @@
  <div class="erros">
  </div>
  <div class="card"  id="formCategoria">
-    <div class="card-header">
+    <div class="card-header" style="color: #9d9d9d">
       Categoria
     </div>
-    <div class="card-body">
+    <div class="card-body" >
         <form action="{{route('categoria.update', $categoria->id)}} " method="POST">
             @method('PUT')
            @csrf
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">categoria</label>
+              <label for="exampleInputEmail1" class="form-label" style="color: #9d9d9d">Categoria</label>
               <input type="text" name="nome" value="{{$categoria->nome}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <br>
               <button type="submit" class="btn btn-outline-primary">Salvar</button>

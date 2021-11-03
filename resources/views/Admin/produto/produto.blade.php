@@ -36,7 +36,7 @@
     </div><br>
     <a href="{{route('produto.edit', $produto->id)}}"  class="btn btn-primary">editar</a>
     <a  href="{{route('produto.index')}}" type="button" class="btn btn-outline-warning">Cancelar</a>
-   <a  class="btn btn-danger">apagar</a>
+  
 
   </div>
 </div>
